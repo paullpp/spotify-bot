@@ -2,13 +2,13 @@ const creds = require('./secrets.json')
 const axios = require('axios')
 const QueryString = require('qs')
 
-const posturl = 'https://api.spotify.com/v1/users/' + creds['user_id'] + '/playlists'
+base = 'https://api.spotify.com/v1/playlists/'
+endpoint = '/tracks'
 
-exports.make_playlist = async function() {
-    var res = await axios.post(posturl,
+exports.insert_playlist = async function(id, uris) {
+    var res = await axios.post(base + id + endpoint,
             JSON.stringify({
-                name: "Liked Song Playlist",
-                public: false
+                uris: uris
             }), {
             headers: { 
                 "Content-Type": "application/json",
@@ -17,3 +17,5 @@ exports.make_playlist = async function() {
         })
     return res
 }
+
+
