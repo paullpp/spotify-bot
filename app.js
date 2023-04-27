@@ -54,7 +54,6 @@ liked_call(0).then(function(data) {
     songarr = data.items
 
     for (i = 0; i < (data.data['items']).length; i++) {
-        //console.log(data.data.items[i].track.uri)
         uriarr.push(data.data.items[i].track.uri)
     }
 
@@ -62,7 +61,6 @@ liked_call(0).then(function(data) {
         liked_call(processed).then(function(data) {
             var temparr = []
             for (i = 0; i < (data.data['items']).length; i++) {
-                //console.log(data.data.items[i].track.uri)
                 temparr.push(data.data.items[i].track.uri)
             }
             add_songs(created_id, temparr).then(function(data) {
