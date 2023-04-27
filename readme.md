@@ -19,3 +19,7 @@ code : auth code from /login endpoint
 token : access token from /callback endpoint
 refresh : refresh token from /callback endpoint
 user_id : spotify user id (username) (NOT profile name)
+
+node oauth.js for auth
+
+node app.js for app
