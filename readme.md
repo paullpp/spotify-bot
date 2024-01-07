@@ -39,7 +39,3 @@ Authentication:
 ## Exectuion - App:
 
 - npm run app
-
-## Notes:
-
-Spotify doesn't have the best API servers. 50X responses are common for endpoints such as the one used to add tracks to a playlist. This will result in unreliable execution, and out of 500 liked songs, around 250-350 random liked songs will be added to the newly created playlist. This is an ongoing issue. 
